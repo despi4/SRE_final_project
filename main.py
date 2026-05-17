@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 
+from app.monitoring.http_metrics import setup_metrics_middleware
 from app.routers.analytics import router as analytics_router
 from app.routers.health import router as health_router
+from app.routers.metrics import router as metrics_router
 from app.routers.notifications import router as notifications_router
 from app.routers.orders import router as orders_router
 from app.routers.products import router as products_router
@@ -13,8 +15,11 @@ app = FastAPI(
     version="1.0.0",
 )
 
+setup_metrics_middleware(app)
+
 # Explicit top-level health endpoint
 app.include_router(health_router)
+app.include_router(metrics_router)
 
 # Versioned API endpoints
 API_PREFIX = "/api/v1"
