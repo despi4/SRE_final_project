@@ -4,3 +4,5 @@ terraform.tfstate
 terraform.tfstate.backup
 *.tfvars
 generated/
+ssh_sre
+ssh_sre.pub
