@@ -69,3 +69,6 @@ Build a lightweight, production-ready FastAPI microservice from scratch with cle
 - Minimal dependency management via `requirements.txt` (`fastapi`, `uvicorn[standard]`, `pydantic>=2`)
 - No database/auth for v1 scaffold; in-memory store is intentional for lightweight demonstrator
 - Mock services are intentionally thin but structurally production-aligned for later expansion
+
+## Terraform
+## CI/CD Pipline
